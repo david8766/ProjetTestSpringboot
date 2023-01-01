@@ -2,6 +2,7 @@ package com.example.ProjetTest.service;
 import com.example.ProjetTest.model.User;
 import com.example.ProjetTest.repository.UserRepository;
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -9,7 +10,7 @@ import java.util.Optional;
 @Data
 @Service
 public class UserService {
-
+    @Autowired
     private UserRepository userRepository;
 
     public Optional<User> getUserById(final Long id){
